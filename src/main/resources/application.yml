@@ -1,3 +1,5 @@
+env: ${remote.env}
+
 server:
   port: 7000
 
