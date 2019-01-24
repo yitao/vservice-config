@@ -1,5 +1,3 @@
-env2: ${env}
-
 server:
   port: 7000
 
@@ -12,12 +10,18 @@ spring:
         git:
           uri: https://github.com/yitao/vservice-config
           search-paths: '{application}'
+          #username: xx
+          #password: xx
       label: master
-      profile: dev
-      uri: http://localhost:700
 
 management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+  security:
+    enabled: false
+
+eureka:
+  instance:
+    hostname: vservice-config
+    instance-id: vservice-config-7000
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/

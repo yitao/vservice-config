@@ -1,0 +1,7 @@
+env: dev
+
+server:
+  port: 9000
+spring:
+  application:
+    name: vservice-demo-api1-dev
