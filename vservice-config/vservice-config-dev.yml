@@ -1,5 +1,6 @@
-server:
-  port: 7700
-spring:
-  application:
-    name: vservice-config
+remote:
+  server:
+    port: 7700
+  spring:
+    application:
+      name: vservice-config

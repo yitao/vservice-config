@@ -1,5 +1,5 @@
 server:
-  port: 7000
+  port: ${remote.server.port}
 
 spring:
   application:
@@ -11,3 +11,11 @@ spring:
           uri: https://github.com/yitao/vservice-config
           search-paths: '{application}'
       label: master
+      profile: dev
+      uri: http://localhost:700
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
