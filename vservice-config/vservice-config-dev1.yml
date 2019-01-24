@@ -1,7 +1,7 @@
-remote:
-  env: dev1
-  server:
-    port: 7001
-  spring:
-    application:
-      name: vservice-config
+env: dev1
+
+server:
+  port: 7001
+spring:
+  application:
+    name: vservice-config
