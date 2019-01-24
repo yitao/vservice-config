@@ -1,0 +1,43 @@
+eureka:
+  instance:
+    #主机名
+    #hostname: ${spring.cloud.client.ipAddress}
+    #实列名称
+    #instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    #允许使用ip
+    #prefer-ip-address: true
+    #服务续约到期时间
+    lease-expiration-duration-in-seconds: 30
+    #心跳发送时间
+    lease-renewal-interval-in-seconds: 10
+  #客户端配置
+  client:
+    #serviceUrl:
+    #注册中心地址
+      #defaultZone:  http://192.168.1.25:8761/eureka/
+    #客户端心跳上报地址
+    registry-fetch-interval-seconds: 5 # 默认为30秒
+    #健康检查 默认检查
+    healthcheck:
+      enabled: true #spring:开启健康检查（依赖spring-boot-starter-actuator）
+spring:
+  #cloud配置修改
+  cloud:
+    config:
+      # 配置重试次数，默认为6
+      fail-fast: true
+      retry:
+        multiplier: 1.1
+        # 配置重试次数，默认为6
+        max-attempts: 6
+        #初始重试间隔时间，默认1000ms
+        initial-interval: 1000
+        max-interval: 2000
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: WEWAY-ZIPKIN
+    api-b:
+      path: /api-b/**
+      serviceId: WEWAY-ZUUL
