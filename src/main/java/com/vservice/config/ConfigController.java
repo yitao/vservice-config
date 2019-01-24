@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/config")
 public class ConfigController {
 
-    @Value("${server.port}")
-    String port;
+    @Value("${env}")
+    String env;
 
-    @RequestMapping("/port")
-    public String port() {
-        return port;
+    @RequestMapping("/env")
+    public String env() {
+        return env;
     }
 
 }

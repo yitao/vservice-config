@@ -1,3 +1,4 @@
+env: dev1
 server:
   port: 7001
 spring:

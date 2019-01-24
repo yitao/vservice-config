@@ -1,5 +1,5 @@
 server:
-  port: ${remote.server.port}
+  port: 7000
 
 spring:
   application:
