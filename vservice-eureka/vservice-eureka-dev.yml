@@ -1,5 +1,7 @@
+env: dev
+
 server:
   port: 8000
 spring:
   application:
-    name: vservice-eureka
+    name: vservice-eureka-dev

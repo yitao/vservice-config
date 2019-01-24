@@ -1,4 +1,4 @@
-env: ${remote.env}
+env2: ${env}
 
 server:
   port: 7000

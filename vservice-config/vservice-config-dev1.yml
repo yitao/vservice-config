@@ -4,4 +4,4 @@ server:
   port: 7001
 spring:
   application:
-    name: vservice-config
+    name: vservice-config-dev1

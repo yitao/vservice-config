@@ -1,5 +1,7 @@
+env: dev1
+
 server:
   port: 8101
 spring:
   application:
-    name: vservice-zuul
+    name: vservice-zuul-dev1
